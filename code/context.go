@@ -3,24 +3,33 @@ package code
 import (
 	"math/big"
 
-	pb "git.skyvein.net/service/contractsdk/go/pb"
+	pb "github.com/skyvein-baas/go-contractsdk/pb"
 )
 
-// Context is the context in which the contract runs
+// 区块链上下问
 type Context interface {
+	// 调用参数
 	Args() map[string][]byte
+	//
 	Caller() string
+	// 获取合约创建者
 	Initiator() string
+	// 权限列表
 	AuthRequire() []string
 
+	// 操作数据
 	PutObject(key []byte, value []byte) error
 	GetObject(key []byte) ([]byte, error)
 	DeleteObject(key []byte) error
 	NewIterator(start, limit []byte) Iterator
 
+	// 查询交易
 	QueryTx(txid string) (*pb.Transaction, error)
+	// 查询区块
 	QueryBlock(blockid string) (*pb.Block, error)
+	// 转账
 	Transfer(to string, amount *big.Int) error
+	// 调用合约
 	Call(module, contract, method string, args map[string][]byte) (*Response, error)
 }
 

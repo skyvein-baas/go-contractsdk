@@ -3,8 +3,8 @@ package exec
 import (
 	"math/big"
 
-	"git.skyvein.net/service/contractsdk/go/code"
-	pb "git.skyvein.net/service/contractsdk/go/pb"
+	"github.com/skyvein-baas/go-contractsdk/code"
+	pb "github.com/skyvein-baas/go-contractsdk/pb"
 )
 
 const (

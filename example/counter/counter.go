@@ -3,8 +3,8 @@ package main
 import (
 	"strconv"
 
-	"git.skyvein.net/service/contractsdk/go/code"
-	"git.skyvein.net/service/contractsdk/go/driver"
+	"github.com/skyvein-baas/go-contractsdk/code"
+	"github.com/skyvein-baas/go-contractsdk/vm"
 )
 
 type counter struct{}
@@ -58,5 +58,5 @@ func (c *counter) Caller(ctx code.Context) code.Response {
 }
 
 func main() {
-	driver.Serve(new(counter))
+	vm.Serve(new(counter))
 }

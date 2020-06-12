@@ -1,8 +1,8 @@
 package exec
 
 import (
-	"git.skyvein.net/service/contractsdk/go/code"
-	pb "git.skyvein.net/service/contractsdk/go/pb"
+	"github.com/skyvein-baas/go-contractsdk/code"
+	pb "github.com/skyvein-baas/go-contractsdk/pb"
 )
 
 var (
@@ -11,7 +11,7 @@ var (
 
 const MAX_ITERATOR_CAP = 100
 
-// kvIterator is a private struct
+// kvIterator 数据迭代器
 type kvIterator struct {
 	buf          []*pb.IteratorItem // current buffer of the kv items
 	curBuf       *pb.IteratorItem   // pointer of current position
@@ -22,7 +22,7 @@ type kvIterator struct {
 	start, limit []byte
 }
 
-// newkvIterator return a code.Iterator
+// newkvIterator 获取数据迭代器
 func newKvIterator(c *contractContext, start, limit []byte) code.Iterator {
 	return &kvIterator{
 		start: start,
@@ -31,7 +31,7 @@ func newKvIterator(c *contractContext, start, limit []byte) code.Iterator {
 	}
 }
 
-// load loads the data from xbrigde, called when buf is empty, maintains the curIdx and starter
+// 获取数据
 func (ki *kvIterator) load() {
 	//clean the buf at beginning
 	ki.buf = ki.buf[0:0]

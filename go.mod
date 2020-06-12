@@ -1,4 +1,4 @@
-module git.skyvein.net/service/contractsdk/go
+module github.com/skyvein-baas/go-contractsdk
 
 go 1.12
 

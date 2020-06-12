@@ -7,7 +7,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"git.skyvein.net/service/contractsdk/go/code"
+	"github.com/skyvein-baas/go-contractsdk/code"
 )
 
 type BridgeCallFunc func(method string, request proto.Message, response proto.Message) error

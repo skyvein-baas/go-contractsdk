@@ -6,8 +6,8 @@ package pbrpc
 import (
 	context "context"
 	fmt "fmt"
-	pb "git.skyvein.net/service/contractsdk/go/pb"
 	proto "github.com/golang/protobuf/proto"
+	pb "github.com/skyvein-baas/go-contractsdk/pb"
 	grpc "google.golang.org/grpc"
 	math "math"
 )

@@ -3,11 +3,11 @@ package code
 import "encoding/json"
 
 const (
-	// StatusOK is used when contract successfully ends.
+	// 成功
 	StatusOK = 200
-	// StatusErrorThreshold is the status dividing line for the normal operation of the contract
+	// 未知错误
 	StatusErrorThreshold = 400
-	// StatusError is used when contract fails.
+	// 失败
 	StatusError = 500
 )
 
@@ -60,8 +60,8 @@ func IsStatusError(status int) bool {
 	return status >= StatusErrorThreshold
 }
 
-// Driver 接口用于抽象执行合约的框架
-type Driver interface {
+// Vm 执行合约的框架
+type Vm interface {
 	Serve(contract Contract)
 }
 
