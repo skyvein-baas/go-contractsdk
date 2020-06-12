@@ -10,6 +10,4 @@
 
 #### 快速开始
 
-​	```cd contractsdk/go```
-
-​	```GOOS=js GOARCH=wasm go build -o example/counter/counter.wasm example/counter/counter.go```
+​	请参照SDK[开发文档](http://baas-docs.pro.skyvein.net/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/golang%E5%90%88%E7%BA%A6sdk/)
