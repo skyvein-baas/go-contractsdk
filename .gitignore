@@ -1,3 +1,5 @@
 /cpp
 /pb
 /xc
+
+*.wasm
