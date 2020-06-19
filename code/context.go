@@ -6,7 +6,7 @@ import (
 	pb "github.com/skyvein-baas/go-contractsdk/pb"
 )
 
-// 区块链上下问
+// 区块链上下文
 type Context interface {
 	// 调用参数
 	Args() map[string][]byte
